@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Music Player</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="top-bar">
+            <i id="showHide-image" class="material-icons" title="Hide Image">expand_more</i>
+            <span>Now Playing</span>
+            <i id="show-menu" class="material-icons" title="Change Colors">more_horiz</i>
+            
+        </div>
+        <div class="color-menu">
+            <div class="header">
+                <div class="row">
+                    <i class="material-icons">palette</i>
+                    <span>Choose Color Scheme</span>
+                </div>
+                <i id="close-menu" class="material-icons">close</i>
+            </div>
+            <select name="color-scheme" id="color-scheme">
+                <option id="pink" value="pink">Pink</option>
+                <option id="blue" value="blue">Blue</option>
+                <option selected id="green" value="green">Green</option>
+                <option id="dark" value="dark">Dark</option>
+            </select>
+        </div>
+        <div class="image-area" >
+            <img src="" alt="">
+        </div>
+        <div class="song-details">
+            <p class="name"></p>
+            <p class="artist"></p>
+        </div>
+        <div class="progress-area">
+            <div class="progress-bar">
+                <audio id="main-audio" src=""></audio>
+            </div>
+            <div class="song-timer">
+                <span class="current-time">0:00</span>
+                <span class="max-duration">0:00</span>
+            </div>
+        </div>
+        <div class="controls">
+            <i id="repeat-plist" class="material-icons" title="Playlist Looped">repeat</i>
+            <i id="prev" class="material-icons" >skip_previous</i>
+            <div class="play-pause">
+                <i class="material-icons play">play_arrow</i>
+            </div>
+            <i id="next" class="material-icons">skip_next</i>
+            <i id="more-music" class="material-icons">queue_music</i>
+        </div>
+        <div class="music-list">
+            <div class="header">
+                <div class="row">
+                    <i class="material-icons list">queue_music</i>
+                    <span>Music List</span>
+                </div>
+                <i id="close" class="material-icons">close</i>
+            </div>
+            <ul id="playing-list">
+                <!-- Use JS to display music list -->
+            </ul>
+        </div>
+    </div>
+    <script src="js/music-list.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
