@@ -55,7 +55,7 @@ const getTheme = () =>{
     
     const idOption = "#"+localStorage.getItem('theme');
     const optionSelected = wrapper.querySelector(idOption);       
-    optionSelected.setAttribute('selected',true);
+    optionSelected.selected = true;
 }
 
 getTheme();
