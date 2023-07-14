@@ -52,13 +52,13 @@ const setTheme = (theme) => {
 const getTheme = () =>{
     const theme = localStorage.getItem('theme');
     theme && setTheme(theme);
+    
+    const idOption = "#"+localStorage.getItem('theme');
+    const optionSelected = wrapper.querySelector(idOption);       
+    optionSelected.setAttribute('selected',true);
 }
 
 getTheme();
-
-const idOption = "#"+localStorage.getItem('theme');
-const optionSelected = wrapper.querySelector(idOption);
-optionSelected.setAttribute('selected','selected');
 
 document.getElementById('color-scheme').addEventListener('change', function() {
     setTheme(this.value);
